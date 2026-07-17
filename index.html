@@ -184,6 +184,16 @@ a{color:var(--blue)}
 .rating-badge{display:flex;justify-content:center;margin:0 0 40px}
 .rating-badge img{height:84px;width:auto}
 
+/* real customer photo strip */
+.custstrip{margin:0 0 44px}
+.custstrip .cs-title{text-align:center;font-family:Questrial;font-size:clamp(20px,2.4vw,26px);color:var(--ink);margin-bottom:22px}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:760px;margin:0 auto}
+.cs-item{background:#fff;border:1px solid #e1e8f0;border-top:4px solid var(--green);border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 10px 26px rgba(0,40,76,.06);display:flex;flex-direction:column;align-items:center;gap:9px}
+.cs-item .cs-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--blue);box-shadow:0 6px 16px rgba(0,40,76,.18)}
+.cs-item .cs-name{font-family:Questrial;font-size:18px;color:var(--ink)}
+.cs-item .cs-stars{color:var(--gold);font-size:17px;letter-spacing:2px}
+.cs-item .cs-vf{font-size:12.5px;color:var(--green-d);font-weight:700}
+
 /* dynamic review wall */
 .wall{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px}
 .review{position:relative;background:#fff;border:1px solid #e1e8f0;border-left:5px solid var(--blue);border-radius:14px;padding:24px 22px;box-shadow:0 10px 26px rgba(0,40,76,.05);display:flex;flex-direction:column}
@@ -212,7 +222,7 @@ a{color:var(--blue)}
 .founder .wrap{position:relative}
 .founder .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
 .founder-photo{background:#fff;border-radius:18px;padding:20px;box-shadow:0 24px 50px rgba(0,40,76,.12);text-align:center;transform:rotate(-1.4deg)}
-.founder-photo img{width:100%;max-width:260px;margin:0 auto;border-radius:12px}
+.founder-photo img{width:100%;max-width:340px;aspect-ratio:4/3;object-fit:cover;margin:0 auto;border-radius:12px}
 .founder-photo .cap{font-weight:700;color:var(--blue);margin-top:14px;font-size:15px}
 .founder h2{font-size:clamp(28px,3.4vw,42px);color:var(--ink);margin-bottom:16px}
 .founder .note{font-size:18px;line-height:1.75;color:#3a4a5e;margin-bottom:14px}
@@ -309,6 +319,7 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
   .feat.wide{flex-direction:column;align-items:flex-start}
   .wall{grid-template-columns:1fr}
   .review.feature{grid-column:span 1}
+  .cs-grid{grid-template-columns:1fr;max-width:300px}
 }
 </style>
 </head>
@@ -546,6 +557,29 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
   <div class="rating-badge rv">
     <img src="https://cdn.shopify.com/s/files/1/0203/7661/7060/files/HiLo_sports_Trusted_Shops_Bewertungen.png" alt="Trusted Shops Bewertungen Siegel">
   </div>
+  <div class="custstrip rv">
+    <div class="cs-title">Echte HiLo-Kunden, echte Zufriedenheit.</div>
+    <div class="cs-grid">
+      <div class="cs-item">
+        <img class="cs-photo" src="Images/cust-reinhard.png" alt="HiLo Kunde Reinhard">
+        <div class="cs-name">Reinhard</div>
+        <div class="cs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="cs-vf">Verifizierter Kunde</div>
+      </div>
+      <div class="cs-item">
+        <img class="cs-photo" src="Images/cust-elke.png" alt="HiLo Kundin Elke">
+        <div class="cs-name">Elke</div>
+        <div class="cs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="cs-vf">Verifizierter Kunde</div>
+      </div>
+      <div class="cs-item">
+        <img class="cs-photo" src="Images/cust-johannes.png" alt="HiLo Kunde Johannes">
+        <div class="cs-name">Johannes</div>
+        <div class="cs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="cs-vf">Verifizierter Kunde</div>
+      </div>
+    </div>
+  </div>
   <div class="wall">
     <div class="review feature rv">
       <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -608,8 +642,8 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
   <div class="chap rv"><span class="num">04</span><span class="lab">Hinter HiLo</span></div>
   <div class="grid">
     <div class="founder-photo rv">
-      <img src="https://cdn.shopify.com/s/files/1/0203/7661/7060/files/sebastian-hilbe_240x240.jpg" alt="Sebastian Hilbe, Mitgr&uuml;nder von HiLo Sports">
-      <div class="cap">Sebastian Hilbe, Mitgr&uuml;nder</div>
+      <img src="https://cdn.gethypervisual.com/images/shopify/5a636ca2-73c7-412e-baf6-b78dcced7dcd/w1200_86d0_HiLo_sports_Gr_nder.jpg" alt="Rebekka und Sebastian, Gr&uuml;nder von HiLo Sports">
+      <div class="cap">Rebekka und Sebastian, Gr&uuml;nder von HiLo Sports</div>
     </div>
     <div class="rv">
       <h2>Warum es HiLo gibt.</h2>
