@@ -1,7 +1,7 @@
-<!-- HiLo Sports - Welcome Series Landing Page v4 (Standalone preview, bold-branded) -->
+<!-- HiLo Sports - Welcome Series Landing Page Version A (single-product focus, bold-branded) -->
 <!-- Audience: German e-bikers, "Du" address, trust-focused welcome offer with WELCOME10 -->
-<!-- v4 changes: real HiLo logo (nav + footer chip), payment icons, carrier chips, rich trust band, -->
-<!-- CTA reassurance micro-lines, feature blocks (no bare bullets), dynamic 6-review wall -->
+<!-- Version A changes: no chapter numbers, reviews moved above product, customer face strip removed, -->
+<!-- Trusted Shops badge image removed everywhere, real carrier logos, compact CTA after risk -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -53,19 +53,19 @@ a{color:var(--blue)}
 .paytile{background:#fff;border:1px solid #e6ecf4;border-radius:6px;padding:5px 8px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(0,40,76,.08)}
 .paytile img{height:22px;width:auto;display:block}
 
-/* shipping carrier chips */
+/* shipping carrier logos */
 .carriers{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:6px}
-.carrier{display:inline-block;background:#fff;border:1px solid #e6ecf4;border-radius:7px;padding:7px 14px;font-weight:800;font-size:14px;letter-spacing:.5px;color:var(--blue);box-shadow:0 3px 8px rgba(0,40,76,.08)}
+.carrier-logo{display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e6ecf4;border-radius:7px;padding:6px 11px;box-shadow:0 3px 8px rgba(0,40,76,.08)}
+.carrier-logo img{height:26px;width:auto;display:block}
 .carrier-line{font-size:14px;color:#3a4a5e;margin-top:10px;font-weight:600}
-.on-blue .carrier{color:var(--blue)}
 .on-blue .carrier-line{color:#dbe9f7}
 
-/* chapter head */
-.chap{display:flex;align-items:center;gap:18px;margin-bottom:24px}
-.chap .num{font-family:Questrial;font-size:60px;color:var(--blue);line-height:.8}
-.chap .lab{font-size:13px;font-weight:800;letter-spacing:2.5px;color:#7c8ba0;text-transform:uppercase}
-.chap.on-blue .num{color:#8fc6ff}
+/* section eyebrow (chapter head without number) */
+.chap{margin-bottom:18px}
+.chap .lab{display:inline-flex;align-items:center;gap:11px;font-size:13px;font-weight:800;letter-spacing:2.5px;color:var(--blue);text-transform:uppercase}
+.chap .lab::before{content:"";width:30px;height:3px;background:var(--blue);border-radius:2px;display:inline-block}
 .chap.on-blue .lab{color:#bcd6ef}
+.chap.on-blue .lab::before{background:#8fc6ff}
 
 /* top bar + nav */
 .top{background:var(--green);color:#fff;text-align:center;font-weight:700;font-size:14px;letter-spacing:.3px;padding:9px}
@@ -141,6 +141,13 @@ a{color:var(--blue)}
 .rainband img{width:100%;max-height:440px;object-fit:cover;display:block}
 .rainband .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(0,40,76,0),rgba(0,40,76,.85));color:#fff;padding:52px 32px 26px;font-family:Questrial;font-size:clamp(20px,2.6vw,30px);max-width:none}
 
+/* compact CTA band after risk */
+.riskcta{position:relative;background:linear-gradient(135deg,#0060b0 0%,var(--blue) 55%,var(--blue-d) 100%);color:#fff;overflow:hidden}
+.riskcta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1.5px,transparent 1.6px);background-size:26px 26px;opacity:.5}
+.riskcta .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:30px 28px}
+.riskcta .rc-txt{font-family:Questrial;font-size:clamp(20px,2.5vw,27px);max-width:20em;line-height:1.15}
+.riskcta .rc-act{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+
 /* solution */
 .solution{background:var(--light)}
 .solution h2{font-size:clamp(28px,3.4vw,42px);color:var(--ink);max-width:15em;margin-bottom:14px}
@@ -177,22 +184,10 @@ a{color:var(--blue)}
 
 /* testimonials / trust */
 .trustsec{background:#fff}
-.trustsec .rating{text-align:center;margin-bottom:20px}
+.trustsec .rating{text-align:center;margin-bottom:40px}
 .trustsec .rating .stars{color:var(--gold);font-size:26px;letter-spacing:3px}
 .trustsec .rating .big{font-family:Questrial;font-size:clamp(26px,3.2vw,36px);color:var(--ink);margin:8px 0 4px}
 .trustsec .rating .by{font-size:15px;color:#5a6875}
-.rating-badge{display:flex;justify-content:center;margin:0 0 40px}
-.rating-badge img{height:84px;width:auto}
-
-/* real customer photo strip */
-.custstrip{margin:0 0 44px}
-.custstrip .cs-title{text-align:center;font-family:Questrial;font-size:clamp(20px,2.4vw,26px);color:var(--ink);margin-bottom:22px}
-.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:760px;margin:0 auto}
-.cs-item{background:#fff;border:1px solid #e1e8f0;border-top:4px solid var(--green);border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 10px 26px rgba(0,40,76,.06);display:flex;flex-direction:column;align-items:center;gap:9px}
-.cs-item .cs-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--blue);box-shadow:0 6px 16px rgba(0,40,76,.18)}
-.cs-item .cs-name{font-family:Questrial;font-size:18px;color:var(--ink)}
-.cs-item .cs-stars{color:var(--gold);font-size:17px;letter-spacing:2px}
-.cs-item .cs-vf{font-size:12.5px;color:var(--green-d);font-weight:700}
 
 /* dynamic review wall */
 .wall{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px}
@@ -212,7 +207,6 @@ a{color:var(--blue)}
 .reviewer .date{font-size:12.5px;color:#8a97a3;margin-top:1px}
 .reviewer .vf{font-size:12.5px;color:var(--green-d);margin-top:2px}
 .seal-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px 34px}
-.seal-row img{height:78px;width:auto}
 .seal-chip{display:inline-flex;align-items:center;gap:10px;background:var(--light);border:1px solid #e1e8f0;border-radius:30px;padding:12px 20px;font-size:15px;font-weight:700;color:var(--ink)}
 .seal-chip svg{width:20px;height:20px}
 
@@ -279,8 +273,6 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
 .foot .logo-chip img{height:30px;width:auto;display:block}
 .foot p{color:#bcd0e4;font-size:14px;margin-top:12px}
 .foot .fpay{margin:20px 0 6px}
-.foot .fbadge{margin-top:22px}
-.foot .fbadge img{height:70px;width:auto;margin:0 auto}
 .foot .fcarriers{margin-top:18px}
 
 /* reveal */
@@ -313,13 +305,11 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
 @media(max-width:480px){
   .product-grid{grid-template-columns:1fr}
   .nav .r{display:none}
-  .chap .num{font-size:46px}
   .tb-grid{grid-template-columns:1fr}
   .feat-grid{grid-template-columns:1fr}
   .feat.wide{flex-direction:column;align-items:flex-start}
   .wall{grid-template-columns:1fr}
   .review.feature{grid-column:span 1}
-  .cs-grid{grid-template-columns:1fr;max-width:300px}
 }
 </style>
 </head>
@@ -396,16 +386,16 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
     </div>
   </div>
   <div class="tb-foot rv">
-    <span class="carrier">DHL</span>
-    <span class="carrier">GLS</span>
-    <span class="carrier">DPD</span>
+    <span class="carrier-logo"><img src="Images/carrier-dhl.svg" alt="DHL"></span>
+    <span class="carrier-logo"><img src="Images/carrier-gls.svg" alt="GLS"></span>
+    <span class="carrier-logo"><img src="Images/carrier-dpd.svg" alt="DPD"></span>
     <span class="carrier-line">Schneller Versand mit DHL, GLS und DPD, aus &Ouml;sterreich.</span>
   </div>
 </div></section>
 
 <!-- 4) RISK -->
 <section class="sec risk"><div class="wrap">
-  <div class="chap rv"><span class="num">01</span><span class="lab">Das Risiko</span></div>
+  <div class="chap rv"><span class="lab">Das Risiko</span></div>
   <h2 class="rv">Beim Transport ist dein E-Bike schutzlos.</h2>
   <p class="body rv">Auf dem Hecktr&auml;ger sind Motor, Akku und Display Wetter und Stra&szlig;endreck direkt ausgesetzt. Bei Tempo 130 wirkt Regen wie ein Sandstrahler. Ein einziger Schaden kostet oft mehr als jahrelanges Zubeh&ouml;r.</p>
 
@@ -463,9 +453,86 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
   </figure>
 </div></section>
 
-<!-- 5) SOLUTION -->
+<!-- 4b) COMPACT CTA AFTER RISK -->
+<section class="riskcta"><div class="wrap">
+  <div class="rc-txt">Sch&uuml;tze dein E-Bike, bevor ein Transportschaden teuer wird.</div>
+  <div class="rc-act">
+    <a class="btn" href="https://hilosports.de/discount/WELCOME10?redirect=/products/transportschutz-set">Jetzt Transportschutz-Set mit 10% sichern &rarr;</a>
+    <div class="cta-reassure on-blue">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#bfe3a3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      Sichere Zahlung &middot; 60 Tage Geld-zur&uuml;ck
+    </div>
+  </div>
+</div></section>
+
+<!-- 5) TRUST / TESTIMONIALS (moved up: right after risk, before the product section) -->
+<section class="sec trustsec"><div class="wrap">
+  <div class="chap rv"><span class="lab">Das Vertrauen</span></div>
+  <h2 class="rv" style="font-size:clamp(28px,3.4vw,42px);color:var(--ink);max-width:16em;margin-bottom:34px;">Worauf &uuml;ber 100.000 E-Biker vertrauen.</h2>
+  <div class="rating rv">
+    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="big">4,71 von 5 aus 7.985 Bewertungen</div>
+    <div class="by">gepr&uuml;ft von Trusted Shops</div>
+  </div>
+  <div class="wall">
+    <div class="review feature rv">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote">&bdquo;Absolut bester Schutz beim Transport unserer E-Bikes. Starkes Material, sehr gut verarbeitet und problemlos zu montieren.&ldquo;</p>
+      <div class="foot-r reviewer">
+        <div class="av">HK</div>
+        <div><div class="name">HiLo Kunde (Community)</div><div class="date">19.06.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
+      </div>
+    </div>
+    <div class="review tall rv">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote">&bdquo;Die bestellten Schutzh&uuml;llen f&uuml;r den Lenker, das Mittelrohr und um den Fahrmotor herum sind sehr hochwertig gemacht.&ldquo;</p>
+      <div class="foot-r reviewer">
+        <div class="av">PL</div>
+        <div><div class="name">Peter L.</div><div class="date">25.05.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
+      </div>
+    </div>
+    <div class="review rv">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote">&bdquo;Ein sehr sch&ouml;nes, gut verarbeitetes Teil. Passt optimal an mein E-Bike mit Bosch Mittelmotor.&ldquo;</p>
+      <div class="foot-r reviewer">
+        <div class="av">BR</div>
+        <div><div class="name">Burkhardt R.</div><div class="date">20.05.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
+      </div>
+    </div>
+    <div class="review rv">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote">&bdquo;Sie wurde sehr schnell geliefert und den ersten Test hat sie mit Bravour bestanden.&ldquo;</p>
+      <div class="foot-r reviewer">
+        <div class="av">KH</div>
+        <div><div class="name">Klaus H.</div><div class="date">03.06.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
+      </div>
+    </div>
+    <div class="review rv">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote">&bdquo;HiLo Sports hat mir innert k&uuml;rzester Zeit einen Gratisersatz gesendet, ist ein super Lieferant und unkompliziert.&ldquo;</p>
+      <div class="foot-r reviewer">
+        <div class="av">BB</div>
+        <div><div class="name">Beat B.</div><div class="date">03.06.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
+      </div>
+    </div>
+    <div class="review rv">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote">&bdquo;Ich habe mir die Abdeckplane f&uuml;r zwei Fahrr&auml;der am Heck vom Wohnmobil hier online bestellt. Sie wurde sehr schnell geliefert.&ldquo;</p>
+      <div class="foot-r reviewer">
+        <div class="av">HK</div>
+        <div><div class="name">HiLo Kunde (Community)</div><div class="date">23.05.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="seal-row rv">
+    <span class="seal-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0058A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"></path><path d="M3.5 15a9 9 0 1 0 2.1-9.4L1 10"></path></svg>60 Tage Geld-zur&uuml;ck</span>
+    <span class="seal-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0058A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>Versand mit DHL, GLS und DPD</span>
+  </div>
+</div></section>
+
+<!-- 6) SOLUTION -->
 <section class="sec solution"><div class="wrap">
-  <div class="chap rv"><span class="num">02</span><span class="lab">Der Schutz</span></div>
+  <div class="chap rv"><span class="lab">Der Schutz</span></div>
   <h2 class="rv">Ein Set. Drei H&uuml;llen. Alles gesch&uuml;tzt.</h2>
   <p class="body rv">Das E-Bike Transportschutz-Set sch&uuml;tzt Motor, Akku und Display in einem. Werkzeuglos angebracht, passend f&uuml;r PKW, Kastenwagen und Wohnmobil.</p>
   <div class="sol-grid">
@@ -521,16 +588,16 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
         <span class="paytile"><img src="https://hilosports.de/cdn/shopifycloud/storefront/assets/payment_icons/amazon-ec9fb491.svg" alt="Amazon Pay"></span>
       </div>
       <div class="carriers">
-        <span class="carrier">DHL</span>
-        <span class="carrier">GLS</span>
-        <span class="carrier">DPD</span>
+        <span class="carrier-logo"><img src="Images/carrier-dhl.svg" alt="DHL"></span>
+        <span class="carrier-logo"><img src="Images/carrier-gls.svg" alt="GLS"></span>
+        <span class="carrier-logo"><img src="Images/carrier-dpd.svg" alt="DPD"></span>
       </div>
       <p class="carrier-line">Schneller Versand mit DHL, GLS und DPD, aus &Ouml;sterreich.</p>
     </div>
   </div>
 </div></section>
 
-<!-- 6) MID CTA BAND -->
+<!-- 7) MID CTA BAND -->
 <section class="midcta"><div class="wrap">
   <h3>10% auf alles zum Kennenlernen.</h3>
   <div class="mrow">
@@ -545,101 +612,9 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
   </div>
 </div></section>
 
-<!-- 7) TRUST / TESTIMONIALS -->
-<section class="sec trustsec"><div class="wrap">
-  <div class="chap rv"><span class="num">03</span><span class="lab">Das Vertrauen</span></div>
-  <h2 class="rv" style="font-size:clamp(28px,3.4vw,42px);color:var(--ink);max-width:16em;margin-bottom:34px;">Worauf &uuml;ber 100.000 E-Biker vertrauen.</h2>
-  <div class="rating rv">
-    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="big">4,71 von 5 aus 7.985 Bewertungen</div>
-    <div class="by">gepr&uuml;ft von Trusted Shops</div>
-  </div>
-  <div class="rating-badge rv">
-    <img src="https://cdn.shopify.com/s/files/1/0203/7661/7060/files/HiLo_sports_Trusted_Shops_Bewertungen.png" alt="Trusted Shops Bewertungen Siegel">
-  </div>
-  <div class="custstrip rv">
-    <div class="cs-title">Echte HiLo-Kunden, echte Zufriedenheit.</div>
-    <div class="cs-grid">
-      <div class="cs-item">
-        <img class="cs-photo" src="Images/cust-reinhard.png" alt="HiLo Kunde Reinhard">
-        <div class="cs-name">Reinhard</div>
-        <div class="cs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="cs-vf">Verifizierter Kunde</div>
-      </div>
-      <div class="cs-item">
-        <img class="cs-photo" src="Images/cust-elke.png" alt="HiLo Kundin Elke">
-        <div class="cs-name">Elke</div>
-        <div class="cs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="cs-vf">Verifizierter Kunde</div>
-      </div>
-      <div class="cs-item">
-        <img class="cs-photo" src="Images/cust-johannes.png" alt="HiLo Kunde Johannes">
-        <div class="cs-name">Johannes</div>
-        <div class="cs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="cs-vf">Verifizierter Kunde</div>
-      </div>
-    </div>
-  </div>
-  <div class="wall">
-    <div class="review feature rv">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="quote">&bdquo;Absolut bester Schutz beim Transport unserer E-Bikes. Starkes Material, sehr gut verarbeitet und problemlos zu montieren.&ldquo;</p>
-      <div class="foot-r reviewer">
-        <div class="av">HK</div>
-        <div><div class="name">HiLo Kunde (Community)</div><div class="date">19.06.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
-      </div>
-    </div>
-    <div class="review tall rv">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="quote">&bdquo;Die bestellten Schutzh&uuml;llen f&uuml;r den Lenker, das Mittelrohr und um den Fahrmotor herum sind sehr hochwertig gemacht.&ldquo;</p>
-      <div class="foot-r reviewer">
-        <div class="av">PL</div>
-        <div><div class="name">Peter L.</div><div class="date">25.05.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
-      </div>
-    </div>
-    <div class="review rv">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="quote">&bdquo;Ein sehr sch&ouml;nes, gut verarbeitetes Teil. Passt optimal an mein E-Bike mit Bosch Mittelmotor.&ldquo;</p>
-      <div class="foot-r reviewer">
-        <div class="av">BR</div>
-        <div><div class="name">Burkhardt R.</div><div class="date">20.05.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
-      </div>
-    </div>
-    <div class="review rv">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="quote">&bdquo;Sie wurde sehr schnell geliefert und den ersten Test hat sie mit Bravour bestanden.&ldquo;</p>
-      <div class="foot-r reviewer">
-        <div class="av">KH</div>
-        <div><div class="name">Klaus H.</div><div class="date">03.06.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
-      </div>
-    </div>
-    <div class="review rv">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="quote">&bdquo;HiLo Sports hat mir innert k&uuml;rzester Zeit einen Gratisersatz gesendet, ist ein super Lieferant und unkompliziert.&ldquo;</p>
-      <div class="foot-r reviewer">
-        <div class="av">BB</div>
-        <div><div class="name">Beat B.</div><div class="date">03.06.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
-      </div>
-    </div>
-    <div class="review rv">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="quote">&bdquo;Ich habe mir die Abdeckplane f&uuml;r zwei Fahrr&auml;der am Heck vom Wohnmobil hier online bestellt. Sie wurde sehr schnell geliefert.&ldquo;</p>
-      <div class="foot-r reviewer">
-        <div class="av">HK</div>
-        <div><div class="name">HiLo Kunde (Community)</div><div class="date">23.05.2026</div><div class="vf">&#10003; Verifiziert &uuml;ber Trusted Shops</div></div>
-      </div>
-    </div>
-  </div>
-  <div class="seal-row rv">
-    <img src="https://cdn.shopify.com/s/files/1/0203/7661/7060/files/HiLo_sports_Trusted_Shops_Bewertungen.png" alt="Trusted Shops Bewertungen Siegel">
-    <span class="seal-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0058A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"></path><path d="M3.5 15a9 9 0 1 0 2.1-9.4L1 10"></path></svg>60 Tage Geld-zur&uuml;ck</span>
-    <span class="seal-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0058A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>Versand mit DHL, GLS und DPD</span>
-  </div>
-</div></section>
-
 <!-- 8) FOUNDER -->
 <section class="sec founder"><div class="wrap">
-  <div class="chap rv"><span class="num">04</span><span class="lab">Hinter HiLo</span></div>
+  <div class="chap rv"><span class="lab">Hinter HiLo</span></div>
   <div class="grid">
     <div class="founder-photo rv">
       <img src="https://cdn.gethypervisual.com/images/shopify/5a636ca2-73c7-412e-baf6-b78dcced7dcd/w1200_86d0_HiLo_sports_Gr_nder.jpg" alt="Rebekka und Sebastian, Gr&uuml;nder von HiLo Sports">
@@ -743,11 +718,10 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
       <span class="paytile"><img src="https://hilosports.de/cdn/shopifycloud/storefront/assets/payment_icons/amazon-ec9fb491.svg" alt="Amazon Pay"></span>
     </div>
     <div class="fcarriers carriers" style="justify-content:center">
-      <span class="carrier">DHL</span>
-      <span class="carrier">GLS</span>
-      <span class="carrier">DPD</span>
+      <span class="carrier-logo"><img src="Images/carrier-dhl.svg" alt="DHL"></span>
+      <span class="carrier-logo"><img src="Images/carrier-gls.svg" alt="GLS"></span>
+      <span class="carrier-logo"><img src="Images/carrier-dpd.svg" alt="DPD"></span>
     </div>
-    <div class="fbadge"><img src="https://cdn.shopify.com/s/files/1/0203/7661/7060/files/HiLo_sports_Trusted_Shops_Bewertungen.png" alt="Trusted Shops Bewertungen Siegel"></div>
   </div>
 </footer>
 
