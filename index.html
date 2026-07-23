@@ -159,9 +159,12 @@ a{color:var(--blue)}
 .prodframe .banner .h{font-family:Questrial;font-size:16px;letter-spacing:.5px}
 .prodframe .banner .s{font-size:12px;color:#cfe0f2;font-weight:700;letter-spacing:1px;margin-top:3px}
 .price-block{margin:26px 0}
-.price-block .compare{text-decoration:line-through;color:#8a97a3;font-size:18px;margin-right:12px}
-.price-block .sale{font-family:Questrial;font-size:46px;font-weight:700;color:var(--ink);display:inline-block;vertical-align:middle}
-.price-block .welcome{display:block;color:var(--green-d);font-weight:800;font-size:16px;margin-top:6px}
+.price-block .price-sub{margin-bottom:10px}
+.price-block .compare{text-decoration:line-through;color:#8a97a3;font-size:16px;margin-right:12px}
+.price-block .sale{font-family:Questrial;font-size:24px;font-weight:700;color:#3a4a5e;display:inline-block;vertical-align:middle}
+.welcome-price{display:inline-flex;align-items:baseline;gap:14px;flex-wrap:wrap;background:linear-gradient(135deg,var(--green),var(--green-d));color:#fff;border-radius:14px;padding:16px 24px;box-shadow:0 14px 32px rgba(60,175,0,.32)}
+.welcome-price .wp-lab{font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#eaffdc}
+.welcome-price .wp-val{font-family:Questrial;font-size:clamp(38px,4.6vw,54px);line-height:1;color:#fff}
 
 /* feature blocks (replaces bare bullet list) */
 .feathead{font-family:Questrial;font-size:22px;color:var(--ink);margin:2px 0 18px}
@@ -181,6 +184,29 @@ a{color:var(--blue)}
 .midcta h3{font-family:Questrial;font-size:clamp(24px,3vw,34px)}
 .midcta .mrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .midcta .mcta{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+
+/* mit/ohne comparison */
+.cmpsec{background:var(--light)}
+.cmpsec h2{font-size:clamp(28px,3.4vw,42px);color:var(--ink);max-width:18em;margin-bottom:14px}
+.cmpsec .body{font-size:18px;line-height:1.7;color:#3a4a5e;max-width:40em;margin-bottom:40px}
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:38px}
+.cmp-col{background:#fff;border:1px solid #e1e8f0;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(0,40,76,.06)}
+.cmp-col.mit{border:2px solid var(--green);box-shadow:0 14px 32px rgba(60,175,0,.14)}
+.cmp-head{font-family:Questrial;font-size:clamp(18px,2.2vw,22px);padding:18px 24px;color:#fff}
+.cmp-col.mit .cmp-head{background:linear-gradient(135deg,var(--blue),var(--blue-d))}
+.cmp-col.ohne .cmp-head{background:#5a6875}
+.cmp-list{list-style:none;padding:8px 24px 20px}
+.cmp-list li{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid #eef2f7;font-size:15.5px;line-height:1.5;color:#33414f}
+.cmp-list li:last-child{border-bottom:none}
+.cmp-ic{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-top:2px}
+.cmp-col.mit .cmp-ic{background:var(--green);color:#fff}
+.cmp-col.ohne .cmp-ic{background:#f3e2e2;color:#a94436}
+.cmp-col.ohne .cmp-list li{color:#5a6875}
+.cmp-col.mit .cmp-list b{color:var(--green-d)}
+.cmp-col.ohne .cmp-list b{color:#a94436;font-weight:700}
+.cmp-cta{text-align:center}
+.cmp-urgency{font-family:Questrial;font-size:clamp(19px,2.4vw,24px);color:var(--ink);max-width:30em;margin:0 auto 22px;line-height:1.35}
+.cmp-cta .cta-reassure{justify-content:center}
 
 /* testimonials / trust */
 .trustsec{background:#fff}
@@ -291,6 +317,7 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
   .riskpanel .rp{grid-template-columns:1fr;gap:26px}
   .zone-grid{grid-template-columns:1fr}
   .sol-grid{grid-template-columns:1fr;gap:30px}
+  .cmp-grid{grid-template-columns:1fr;gap:18px}
   .prodframe .banner{position:static;transform:none;max-width:none;margin-bottom:16px}
   .tb-grid{grid-template-columns:1fr 1fr}
   .wall{grid-template-columns:1fr 1fr}
@@ -569,9 +596,14 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
         </div>
       </div>
       <div class="price-block">
-        <span class="compare">statt 77,97 &euro;</span>
-        <span class="sale">62,29 &euro;</span>
-        <span class="welcome">mit WELCOME10 ca. 56,06 &euro;</span>
+        <div class="price-sub">
+          <span class="compare">statt 77,97 &euro;</span>
+          <span class="sale">62,29 &euro;</span>
+        </div>
+        <div class="welcome-price">
+          <span class="wp-lab">mit WELCOME10</span>
+          <span class="wp-val">ca. 56,06 &euro;</span>
+        </div>
       </div>
       <a class="btn lg" href="https://hilosports.de/discount/WELCOME10?redirect=/products/transportschutz-set">Transportschutz-Set mit 10% sichern &rarr;</a>
       <div class="cta-reassure">
@@ -608,6 +640,44 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
         <svg viewBox="0 0 24 24" fill="none" stroke="#bfe3a3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         Sichere Zahlung &middot; 60 Tage Geld-zur&uuml;ck &middot; Trusted Shops gepr&uuml;ft
       </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 7b) MIT/OHNE COMPARISON -->
+<section class="sec cmpsec"><div class="wrap">
+  <div class="chap rv"><span class="lab">Der Vergleich</span></div>
+  <h2 class="rv">Mit Schutz-Set oder ohne? Der Unterschied auf einen Blick.</h2>
+  <p class="body rv">Links das E-Bike mit dem Transportschutz-Set, rechts ohne. Entscheide selbst, welches Risiko du auf die Reise mitnimmst.</p>
+  <div class="cmp-grid">
+    <div class="cmp-col mit rv">
+      <div class="cmp-head">Dein E-Bike mit dem Schutz-Set</div>
+      <ul class="cmp-list">
+        <li><span class="cmp-ic">&#10003;</span><span>Motor, Akku und Display beim Transport gesch&uuml;tzt</span></li>
+        <li><span class="cmp-ic">&#10003;</span><span>Schutz vor Steinschlag, Regen und Streusalz</span></li>
+        <li><span class="cmp-ic">&#10003;</span><span>Einmalig <b>ca. 56,06 &euro;</b> mit WELCOME10</span></li>
+        <li><span class="cmp-ic">&#10003;</span><span>60 Tage Geld-zur&uuml;ck-Garantie</span></li>
+        <li><span class="cmp-ic">&#10003;</span><span>Sorgenfrei zum Urlaub und zur&uuml;ck</span></li>
+      </ul>
+    </div>
+    <div class="cmp-col ohne rv">
+      <div class="cmp-head">Dein E-Bike ohne Schutz</div>
+      <ul class="cmp-list">
+        <li><span class="cmp-ic">&#10005;</span><span>Empfindliche Teile liegen frei am Hecktr&auml;ger</span></li>
+        <li><span class="cmp-ic">&#10005;</span><span>Steinschlag, Dauerregen und Streusalz treffen direkt auf die Technik</span></li>
+        <li><span class="cmp-ic">&#10005;</span><span>Motor-Reparatur <b>800 bis 1.500 &euro;</b></span></li>
+        <li><span class="cmp-ic">&#10005;</span><span>Akku-Schaden <b>600 bis 1.200 &euro;</b></span></li>
+        <li><span class="cmp-ic">&#10005;</span><span>Display-Tausch <b>200 bis 500 &euro;</b></span></li>
+        <li><span class="cmp-ic">&#10005;</span><span>Transportsch&auml;den sind kein Garantiefall</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cmp-cta rv">
+    <p class="cmp-urgency">Ein einziger ungesch&uuml;tzter Transport kann teurer werden als zehn Schutz-Sets. Sichere dir jetzt 10 % mit WELCOME10.</p>
+    <a class="btn lg" href="https://hilosports.de/discount/WELCOME10?redirect=/products/transportschutz-set">Jetzt Transportschutz-Set mit 10% sichern &rarr;</a>
+    <div class="cta-reassure">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#329400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      Sichere Zahlung &middot; 60 Tage Geld-zur&uuml;ck &middot; Trusted Shops gepr&uuml;ft
     </div>
   </div>
 </div></section>
@@ -696,11 +766,11 @@ details .answer{padding:0 22px 20px;font-size:16px;color:#33414f;line-height:1.6
 <section class="sec faq"><div class="wrap">
   <h2 class="rv">H&auml;ufige Fragen.</h2>
   <div class="faq-wrap">
-    <details class="rv"><summary>Wie l&ouml;se ich den Code WELCOME10 ein?</summary><div class="answer">Gib WELCOME10 einfach im Warenkorb im Rabattfeld ein. Die 10% werden sofort abgezogen.</div></details>
-    <details class="rv"><summary>Passt das Transportschutz-Set auf mein E-Bike?</summary><div class="answer">Ja. Das Set ist universell und passt auf g&auml;ngige E-Bikes und Tr&auml;ger f&uuml;r PKW, Kastenwagen und Wohnmobil.</div></details>
-    <details class="rv"><summary>Wie schnell wird geliefert?</summary><div class="answer">Bestellungen bis 10 Uhr gehen am selben Tag raus. Im Schnitt bist du in rund 2 Werktagen versorgt. Schneller Versand mit DHL, GLS und DPD, aus &Ouml;sterreich.</div></details>
-    <details class="rv"><summary>Was, wenn es mir nicht passt?</summary><div class="answer">Du hast 60 Tage Geld-zur&uuml;ck-Garantie. Gef&auml;llt es dir nicht, bekommst du dein Geld zur&uuml;ck.</div></details>
-    <details class="rv"><summary>Warum bei HiLo statt Amazon?</summary><div class="answer">Wir kennen unsere Hersteller pers&ouml;nlich, pr&uuml;fen die Qualit&auml;t selbst und beraten ehrlich. &Uuml;ber 100.000 Kunden und 4,71 Sterne sprechen f&uuml;r sich.</div></details>
+    <details class="rv"><summary>Passt das Set auf mein E-Bike?</summary><div class="answer">Ja, das Set ist universell geschnitten und passt auf praktisch alle g&auml;ngigen E-Bikes, auch mit Bosch- oder Shimano-Mittelmotor. Die Cover werden einfach &uuml;ber Motor, Akku und Display gespannt. Falls du unsicher bist, hilft dir das HiLo-Team pers&ouml;nlich weiter.</div></details>
+    <details class="rv"><summary>Wie schnell bekomme ich meine Bestellung?</summary><div class="answer">Bestellungen, die bis 10:00 Uhr eingehen, verlassen noch am selben Tag das Lager. Im Schnitt ist dein Paket etwa 1,5 Werktage nach Bestellung bei dir. Versand mit DHL, GLS oder DPD.</div></details>
+    <details class="rv"><summary>Wie funktioniert die Retoure?</summary><div class="answer">Du hast 60 Tage Geld-zur&uuml;ck-Garantie, ohne Wenn und Aber. Wenn dich das Set nicht &uuml;berzeugt, schickst du es einfach zur&uuml;ck und bekommst dein Geld erstattet.</div></details>
+    <details class="rv"><summary>Wie aufwendig ist die Montage?</summary><div class="answer">Gar nicht. Die Cover werden ohne Werkzeug einfach &uuml;bergezogen und mit Klett fixiert, in wenigen Minuten sitzt alles.</div></details>
+    <details class="rv"><summary>Gibt es Ersatzteile f&uuml;r eure Produkte?</summary><div class="answer">Ja. Falls mal ein Teil verloren geht oder ersetzt werden muss, bekommst du bei HiLo Ersatzteile, damit du nicht das ganze Set neu kaufen musst. Schreib daf&uuml;r einfach dem Support (<a href="mailto:info@hilosports.de">info@hilosports.de</a>).</div></details>
   </div>
 </div></section>
 
